@@ -1,0 +1,5 @@
+<pkg-info format-version="2" identifier="org.ruby-lang.installer" version="1.9.3-p194" install-location="/usr/local/turbot/ruby" auth="root">
+  <payload installKBytes="86100
+" numberOfFiles="   16535
+"/>
+</pkg-info>

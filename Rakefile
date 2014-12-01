@@ -14,7 +14,7 @@ end
 
 task :default => "pkg/ruby-#{VERSION}.pkg"
 
-file "pkg/ruby-#{VERSION}.pkg" => "/usr/local/heroku/ruby" do |t|
+file "pkg/ruby-#{VERSION}.pkg" => "/usr/local/turbot/ruby" do |t|
   tempdir do |dir|
     cp_r t.prerequisites.first, "#{dir}/ruby"
 
@@ -44,6 +44,6 @@ file "pkg/ruby-#{VERSION}.pkg" => "/usr/local/heroku/ruby" do |t|
   end
 end
 
-file "/usr/local/heroku/ruby" do |t|
-  sh "vendor/ruby-build/bin/ruby-build #{VERSION} #{t.name}"
+file "/usr/local/turbot/ruby" do |t|
+  puts `vendor/ruby-build/bin/ruby-build -v #{VERSION} #{t.name}`
 end
